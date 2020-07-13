@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+:root {
+  /* Brand colors */
+  --brand-primary: #486cab;
+  --brand-primary--inverted: #f3f8fe;
+  --brand-secondary: #a00043;
+  --brand-secondary--inverted: #0a1336;
+
+  /* Typography */
+  --font-family-base: "DM Sans", sans-serif;
+  --font-size-base: 16px;
+  --text-color: var(--brand-secondary--inverted);
+
+  /* Main Navigation */
+  --main-navigation-color: var(--brand-primary);
+  --main-navigation-color--inverted: var(--brand-primary--inverted);
+}
