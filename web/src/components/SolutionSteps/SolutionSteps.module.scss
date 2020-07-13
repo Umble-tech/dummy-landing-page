@@ -1,0 +1,24 @@
+.solutionSteps {
+  max-width: 800px;
+  margin: 1rem auto;
+
+  .solutionStep {
+    h5 {
+      margin: 0;
+    }
+    h2 {
+      max-width: 20em;
+      margin: 0 0 1rem;
+    }
+    p {
+      max-width: 25em;
+    }
+    &:nth-child(even) {
+      text-align: right;
+      * {
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+  }
+}

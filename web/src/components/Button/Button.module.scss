@@ -1,0 +1,24 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.button {
+  padding: 0.5rem 1rem;
+  background-color: $color-secondary-400;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  box-shadow: button-shadow($color-secondary-400);
+  border-radius: $main-border-radius;
+  color: $color-secondary-50;
+  transition: transform 200ms ease-in-out;
+  will-change: transform;
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover {
+    transform: scale(0.98);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}

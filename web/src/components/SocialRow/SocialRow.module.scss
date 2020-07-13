@@ -1,0 +1,11 @@
+.socialRow {
+  .socialLink + .socialLink {
+    margin-left: 0.5rem;
+  }
+  .socialLink {
+    color: inherit;
+    svg {
+      width: 24px;
+    }
+  }
+}

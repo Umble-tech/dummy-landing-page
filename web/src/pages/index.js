@@ -1,22 +1,80 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from "../components/Layout/Layout";
+import SEO from "../components/seo";
+import AboveTheFold from "../components/AboveTheFold/AboveTheFold";
+import LandingPageBodyContainer from "../components/LandingPageBodyContainer/LandingPageBodyContainer";
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  const { sanityLandingPage } = useStaticQuery(graphql`
+    query {
+      sanityLandingPage(_id: { regex: "/landingPage/" }) {
+        title
+        subtitle
+        cta {
+          text
+          url
+        }
+        coverImage {
+          asset {
+            fluid(maxWidth: 2000) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+        blocks {
+          ... on SanitySolutionSteps {
+            _key
+            _type
+            solutionSteps {
+              text
+              title
+            }
+          }
+          ... on SanityValuePropositions {
+            _key
+            _type
+            valuePropositions {
+              title
+              text
+              image {
+                asset {
+                  fluid(maxWidth: 400) {
+                    ...GatsbySanityImageFluid
+                  }
+                }
+              }
+            }
+          }
+          ... on SanityCtaSection {
+            _key
+            _type
+            cta {
+              url
+              text
+            }
+            title
+            subtitle
+          }
+        }
+      }
+    }
+  `);
+  const { title, subtitle, cta, coverImage, blocks } = sanityLandingPage;
 
-export default IndexPage
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <AboveTheFold
+        title={title}
+        subtitle={subtitle}
+        coverImage={coverImage}
+        cta={cta}
+      />
+      <LandingPageBodyContainer blocks={blocks} />
+    </Layout>
+  );
+};
+
+export default IndexPage;
