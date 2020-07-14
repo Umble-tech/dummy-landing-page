@@ -18,8 +18,8 @@ CtaSection.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
   cta: PropTypes.shape({
-    text: PropTypes.string,
-    url: PropTypes.string,
+    text: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
   }).isRequired,
 };
 

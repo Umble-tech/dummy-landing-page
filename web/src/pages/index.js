@@ -1,6 +1,5 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-
+import { useStaticQuery } from "gatsby";
 import Layout from "../components/Layout/Layout";
 import SEO from "../components/seo";
 import AboveTheFold from "../components/AboveTheFold/AboveTheFold";
@@ -10,54 +9,8 @@ const IndexPage = () => {
   const { sanityLandingPage } = useStaticQuery(graphql`
     query {
       sanityLandingPage(_id: { regex: "/landingPage/" }) {
-        title
-        subtitle
-        cta {
-          text
-          url
-        }
-        coverImage {
-          asset {
-            fluid(maxWidth: 2000) {
-              ...GatsbySanityImageFluid
-            }
-          }
-        }
-        blocks {
-          ... on SanitySolutionSteps {
-            _key
-            _type
-            solutionSteps {
-              text
-              title
-            }
-          }
-          ... on SanityValuePropositions {
-            _key
-            _type
-            valuePropositions {
-              title
-              text
-              image {
-                asset {
-                  fluid(maxWidth: 400) {
-                    ...GatsbySanityImageFluid
-                  }
-                }
-              }
-            }
-          }
-          ... on SanityCtaSection {
-            _key
-            _type
-            cta {
-              url
-              text
-            }
-            title
-            subtitle
-          }
-        }
+        ...LandingPageHeader
+        ...LandingPageBlocks
       }
     }
   `);

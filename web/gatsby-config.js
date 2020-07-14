@@ -1,11 +1,11 @@
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
+  path: `.env`,
 });
 
 module.exports = {
   siteMetadata: {
-    title: `Dummy Landing Page`,
-    description: `Validate your idea`,
+    title: process.env.GATSBY_SITE_NAME,
+    description: process.env.GATSBY_SITE_DESCRIPTION,
     author: `Tobias Wulvik <tobias@umble.no>`,
   },
   plugins: [
@@ -23,13 +23,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `dummy-landing-page`,
-        short_name: `dummy-landing-page`,
+        name: process.env.GATSBY_SITE_NAME,
+        short_name: process.env.GATSBY_SITE_NAME,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#fff`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -44,8 +44,5 @@ module.exports = {
         graphqlTag: "default",
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 };

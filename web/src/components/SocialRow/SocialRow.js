@@ -10,6 +10,7 @@ const SocialRow = ({ socialPlatforms }) => {
         .filter((social) => social.url)
         .map((social) => (
           <a
+            key={`${social.platform}-${social.url}`}
             href={social.url}
             className={styles.socialLink}
             target="_blank"
@@ -20,6 +21,15 @@ const SocialRow = ({ socialPlatforms }) => {
         ))}
     </div>
   );
+};
+
+SocialRow.propTypes = {
+  socialPlatforms: PropTypes.arrayOf(
+    PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      platform: PropTypes.string.isRequired,
+    })
+  ),
 };
 
 export default SocialRow;

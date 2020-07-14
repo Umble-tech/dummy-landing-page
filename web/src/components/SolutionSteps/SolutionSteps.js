@@ -8,7 +8,7 @@ const SolutionSteps = ({ solutionSteps }) => {
   return (
     <section className={styles.solutionSteps}>
       {solutionSteps.map(({ title, text }, index) => (
-        <div className={styles.solutionStep}>
+        <div className={styles.solutionStep} key={`solution-step-${index}`}>
           <Subtitle>{("0" + (index + 1)).slice(-2)}</Subtitle>
           <Heading2>{title}</Heading2>
           <Body1>{text}</Body1>

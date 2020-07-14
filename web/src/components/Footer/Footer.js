@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import styles from "./Footer.module.scss";
 import SocialRow from "../SocialRow/SocialRow";
 
-const Footer = ({ logoSrc, social }) => {
+const Footer = ({ name, logoSrc, social }) => {
   return (
     <footer className={styles.footer}>
-      <img src={logoSrc} />
+      <img src={logoSrc} alt={`${name} logo`} />
       <SocialRow socialPlatforms={social} />
     </footer>
   );

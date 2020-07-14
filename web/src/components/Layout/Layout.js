@@ -6,35 +6,20 @@ import Footer from "../Footer/Footer";
 import styles from "./Layout.module.scss";
 
 const Layout = ({ children }) => {
-  const { site, sanitySiteSettings } = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
+  const { sanitySiteSettings } = useStaticQuery(graphql`
+    query {
       sanitySiteSettings(_id: { regex: "/siteSettings/" }) {
-        name
-        siteLogo {
-          asset {
-            url
-          }
-        }
-        social {
-          url
-          platform
-        }
+        ...SiteSettings
       }
     }
   `);
-
   const { name, siteLogo, social } = sanitySiteSettings;
 
   return (
     <>
-      <Nav siteTitle={site.siteMetadata.title} logoSrc={siteLogo.asset.url} />
+      <Nav siteTitle={name} logoSrc={siteLogo.asset.url} />
       <main className={styles.pageWrapper}>{children}</main>
-      <Footer logoSrc={siteLogo.asset.url} social={social} />
+      <Footer logoSrc={siteLogo.asset.url} social={social} name={name} />
     </>
   );
 };
