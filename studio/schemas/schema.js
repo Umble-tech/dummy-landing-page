@@ -12,6 +12,8 @@ import solution from "./objects/solution";
 import valuePropositions from "./objects/blocks/valuePropositions";
 import solutionSteps from "./objects/blocks/solutionSteps";
 import ctaSection from "./objects/blocks/ctaSection";
+import input from "./objects/input";
+import registerForm from "./documents/registerForm";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -25,10 +27,12 @@ export default createSchema({
     valuePropositions,
     solutionSteps,
     ctaSection,
+    registerForm,
     // Objects
     cta,
     social,
     valueProposition,
     solution,
+    input,
   ]),
 });

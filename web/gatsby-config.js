@@ -5,7 +5,6 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: process.env.GATSBY_SITE_NAME,
-    description: process.env.GATSBY_SITE_DESCRIPTION,
     author: `Tobias Wulvik <tobias@umble.no>`,
   },
   plugins: [
