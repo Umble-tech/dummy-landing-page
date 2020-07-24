@@ -18,5 +18,15 @@ export default {
       type: "array",
       of: [{ type: "input" }],
     },
+    {
+      name: "buttonText",
+      type: "string",
+      title: "Button text",
+    },
+    {
+      name: "sendInformation",
+      type: "string",
+      title: "Additional text",
+    },
   ],
 };

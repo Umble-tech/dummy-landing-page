@@ -15,10 +15,16 @@ export default {
       options: {
         list: [
           { title: "text", value: "text" },
+          { title: "textarea", value: "textarea" },
           { title: "email", value: "email" },
           { title: "number", value: "number" },
         ],
       },
+    },
+    {
+      name: "required",
+      type: "boolean",
+      title: "Required",
     },
   ],
 };
