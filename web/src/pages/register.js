@@ -13,11 +13,23 @@ const Register = () => {
     }
   `);
 
-  const { title, text, fields } = sanityRegisterForm;
+  const {
+    title,
+    text,
+    fields,
+    buttonText,
+    sendInformation,
+  } = sanityRegisterForm;
 
   return (
     <Layout>
-      <RegisterForm title={title} text={text} fields={fields} />
+      <RegisterForm
+        title={title}
+        text={text}
+        fields={fields}
+        buttonText={buttonText}
+        sendInformation={sendInformation}
+      />
     </Layout>
   );
 };

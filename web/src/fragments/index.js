@@ -80,5 +80,7 @@ export const RegisterForm = graphql`
     text
     title
     fields: _rawFields
+    buttonText
+    sendInformation
   }
 `;
