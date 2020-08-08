@@ -7,19 +7,21 @@ import styles from "./ValuePropositions.module.scss";
 const ValuePropositions = ({ valuePropositions }) => {
   if (valuePropositions.length === 0) return null;
   return (
-    <section
-      className={styles.valuePropositions}
-      style={{
-        gridTemplateColumns: `repeat(${valuePropositions.length}, 1fr)`,
-      }}
-    >
-      {valuePropositions.map(({ title, text, image }) => (
-        <div key={title} className={styles.valueProposition}>
-          {image && <Img fluid={image.asset.fluid} />}
-          <Heading4>{title}</Heading4>
-          <Body1>{text}</Body1>
-        </div>
-      ))}
+    <section>
+      <div
+        className={styles.valuePropositions}
+        style={{
+          gridTemplateColumns: `repeat(${valuePropositions.length}, 1fr)`,
+        }}
+      >
+        {valuePropositions.map(({ title, text, image }) => (
+          <div key={title} className={styles.valueProposition}>
+            {image && <Img fluid={image.asset.fluid} />}
+            <Heading4>{title}</Heading4>
+            <Body1>{text}</Body1>
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

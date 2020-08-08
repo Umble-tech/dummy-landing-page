@@ -1,27 +1,28 @@
 :root {
-  --footer-height: 200px;
+  --footer-height: 120px;
   --nav-height: 5rem;
+  --font-family-display: "Barlow", sans-serif;
 }
 
 $main-border-radius: 4px;
+$page-padding: 0 5%;
 
-$color-primary-50: rgba(243, 248, 254, 1);
-$color-primary-100: rgba(206, 226, 247, 1);
-$color-primary-200: rgba(162, 196, 240, 1);
-$color-primary-300: rgba(112, 151, 212, 1);
-$color-primary-400: rgba(72, 108, 171, 1);
-$color-primary-500: rgba(32, 60, 119, 1);
-$color-primary-600: rgba(25, 46, 100, 1);
-$color-primary-700: rgba(19, 34, 83, 1);
-$color-primary-800: rgba(14, 25, 66, 1);
-$color-primary-900: rgba(10, 19, 54, 1);
-$color-secondary-50: rgba(254, 243, 243, 1);
-$color-secondary-100: rgba(249, 193, 195, 1);
-$color-secondary-200: rgba(244, 136, 152, 1);
-$color-secondary-300: rgba(225, 80, 114, 1);
-$color-secondary-400: rgba(197, 45, 93, 1);
-$color-secondary-500: rgba(160, 0, 67, 1);
-$color-secondary-600: rgba(135, 0, 69, 1);
-$color-secondary-700: rgba(110, 0, 70, 1);
-$color-secondary-800: rgba(87, 1, 64, 1);
-$color-secondary-900: rgba(71, 1, 61, 1);
+$color-gray-000: rgba(251, 251, 251, 1);
+$color-gray-100: rgba(225, 229, 229, 1);
+$color-gray-200: rgba(200, 204, 203, 1);
+$color-gray-300: rgba(173, 178, 178, 1);
+$color-gray-400: rgba(148, 153, 152, 1);
+$color-gray-500: rgba(124, 128, 127, 1);
+$color-gray-600: rgba(97, 102, 101, 1);
+$color-gray-700: rgba(69, 77, 75, 1);
+$color-gray-800: rgba(44, 51, 50, 1);
+$color-gray-900: rgba(24, 27, 27, 1);
+$color-primary-100: rgba(234, 247, 236, 1);
+$color-primary-200: rgba(215, 241, 221, 1);
+$color-primary-300: rgba(181, 217, 194, 1);
+$color-primary-400: rgba(143, 180, 160, 1);
+$color-primary-500: rgba(96, 132, 117, 1);
+$color-primary-600: rgba(74, 113, 101, 1);
+$color-primary-700: rgba(55, 94, 86, 1);
+$color-primary-800: rgba(40, 76, 73, 1);
+$color-primary-900: rgba(29, 61, 62, 1);

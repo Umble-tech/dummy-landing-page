@@ -1,6 +1,9 @@
+@import "../../../styles/variables";
+
 .solutionSteps {
   max-width: 800px;
   margin: 1rem auto;
+  color: $color-gray-000;
 
   .solutionStep {
     h5 {

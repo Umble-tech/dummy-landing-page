@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap");
+@import "../styles/variables";
 
 *,
 *::after,
@@ -16,6 +18,10 @@ html {
   font-size: 100%;
 }
 
+body {
+  background-color: $color-gray-900;
+}
+
 body,
 input,
 button,
@@ -23,4 +29,17 @@ select,
 textarea {
   font-family: "DM Sans", sans-serif;
   font-size: 1rem;
+}
+
+@mixin selection {
+  background-color: $color-primary-300;
+  color: $color-gray-900;
+}
+
+::-moz-selection {
+  @include selection();
+}
+
+::selection {
+  @include selection();
 }

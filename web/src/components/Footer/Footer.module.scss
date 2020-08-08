@@ -2,7 +2,15 @@
 
 .footer {
   height: var(--footer-height);
+  padding: 1rem 5% 2rem;
+  color: $color-gray-000;
   background-color: $color-primary-600;
-  color: $color-primary-50;
-  padding: 2rem 5%;
+  @media screen and (min-width: 500px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    > * {
+      margin: 0;
+    }
+  }
 }

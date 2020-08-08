@@ -18,7 +18,6 @@ const Layout = ({ children, standardPadding }) => {
 
   return (
     <>
-      <Nav siteTitle={name} logoSrc={siteLogo.asset.url} />
       <main
         className={cn(
           styles.pageWrapper,
