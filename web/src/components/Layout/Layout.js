@@ -4,8 +4,9 @@ import { useStaticQuery, graphql } from "gatsby";
 import Nav from "../Nav/Nav";
 import Footer from "../Footer/Footer";
 import styles from "./Layout.module.scss";
+import { cn } from "../../lib/helpers";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, standardPadding }) => {
   const { sanitySiteSettings } = useStaticQuery(graphql`
     query {
       sanitySiteSettings(_id: { regex: "/siteSettings/" }) {
@@ -18,7 +19,14 @@ const Layout = ({ children }) => {
   return (
     <>
       <Nav siteTitle={name} logoSrc={siteLogo.asset.url} />
-      <main className={styles.pageWrapper}>{children}</main>
+      <main
+        className={cn(
+          styles.pageWrapper,
+          standardPadding ? styles.standardPadding : ""
+        )}
+      >
+        {children}
+      </main>
       <Footer logoSrc={siteLogo.asset.url} social={social} name={name} />
     </>
   );
@@ -26,6 +34,7 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  standardPadding: PropTypes.bool,
 };
 
 export default Layout;

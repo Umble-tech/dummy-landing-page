@@ -1,0 +1,31 @@
+@import "../../../styles/variables.scss";
+@import "../Button/Button.module.scss";
+
+.registerFormContainer {
+  padding: 5%;
+  max-width: 600px;
+  margin: 0 auto;
+
+  h2 {
+    margin: 0;
+  }
+  h2,
+  h2 + p,
+  button,
+  button + p {
+    text-align: center;
+  }
+  h2 + p {
+    margin: 0.5rem 0 2rem;
+  }
+  button {
+    display: block;
+    margin: 3rem auto 0;
+  }
+  input,
+  textarea {
+    &:invalid ~ button {
+      @extend .button.disabled;
+    }
+  }
+}

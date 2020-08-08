@@ -21,4 +21,11 @@
   &:active {
     transform: scale(0.95);
   }
+  &:disabled,
+  &.disabled {
+    cursor: not-allowed;
+    background-color: $color-primary-100;
+    color: $color-primary-300;
+    box-shadow: none;
+  }
 }

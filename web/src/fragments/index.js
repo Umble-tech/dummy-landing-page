@@ -73,3 +73,14 @@ export const SiteSettings = graphql`
     }
   }
 `;
+
+export const RegisterForm = graphql`
+  fragment RegisterForm on SanityRegisterForm {
+    _id
+    text
+    title
+    fields: _rawFields
+    buttonText
+    sendInformation
+  }
+`;

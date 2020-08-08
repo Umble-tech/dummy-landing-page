@@ -1,0 +1,32 @@
+@import "../../../styles/variables";
+.label {
+  display: block;
+  position: relative;
+  left: 0.5rem;
+  span {
+    color: $color-secondary-300;
+  }
+}
+// Input, textarea, select etc.
+.input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 2px solid $color-primary-500;
+  border-radius: $main-border-radius;
+  outline: 0;
+  will-change: border-color;
+  transition: border-color 200ms ease-in-out;
+  margin-bottom: 1rem;
+
+  &:focus {
+    border-color: $color-primary-400;
+  }
+  &:hover {
+    border-color: $color-primary-600;
+  }
+}
+textarea.input {
+  resize: vertical;
+  min-height: 2rem;
+  max-width: 100%;
+}
