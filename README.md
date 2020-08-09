@@ -74,4 +74,4 @@ Opprett en konto [https://plausible.io/](https://plausible.io/)
 
 ## Neste steg
 
-Analytics vil etter et par ukers tid gi deg svaret på om brukere er interessert i produktet ditt. Store deler av trafikken på siden har meldt seg på nyhetsbrevet eller meldt interesse. Eller så er dette antallet veldig lavt. Denne dataen forteller deg hvor enten at folk er interessert, eller ikke. 
+Analytics vil etter et par ukers tid gi deg svaret på om brukere er interessert i produktet ditt. Det er som regel lurt å parre siden med en markedsføringsplan via Google AdWords eller liknende. Forhåpentligvis har store deler av trafikken på siden meldt seg på nyhetsbrevet. Dataen forteller deg hvorvidt folk er interessert, eller ei. 
