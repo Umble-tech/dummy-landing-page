@@ -26,7 +26,7 @@ Etter du har forket og klonet prosjektet, må du navigere deg inn i mappen med:�
 3. Nå vil du få spørsmålet: "The current folder contains a configured Sanity studio. Would you like to reconfigure it? (Y/n)" Svar ja med `y` eller bare **enter**.
 4. Velg "Create new project" med piltastene og **enter**.
 5. "Your project name:". Fyll inn.
-    1. "Use the default dataset configuration? (y/n)" Svar ja 
+6. "Use the default dataset configuration? (y/n)" Svar ja 
 
 ### Plausible
 
