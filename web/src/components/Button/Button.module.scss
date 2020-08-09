@@ -2,32 +2,30 @@
 @import "../../../styles/mixins";
 
 .button {
-  padding: 0.8rem 1.5rem;
-  background-color: $color-gray-000;
+  padding: 0.5rem 1rem;
+  background-color: $color-secondary-400;
   cursor: pointer;
   border: 0;
   outline: 0;
-  box-shadow: button-shadow(4px);
+  box-shadow: button-shadow($color-secondary-400);
   border-radius: $main-border-radius;
-  color: $color-gray-900;
-  transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
+  color: $color-secondary-50;
+  transition: transform 200ms ease-in-out;
   will-change: transform;
   text-decoration: none;
   display: inline-block;
 
   &:hover {
-    transform: translateY(2px);
-    box-shadow: button-shadow(2px);
+    transform: scale(0.98);
   }
   &:active {
-    transform: translateY(4px);
-    box-shadow: button-shadow(0px);
+    transform: scale(0.95);
   }
   &:disabled,
   &.disabled {
     cursor: not-allowed;
-    background-color: $color-gray-100;
-    color: $color-gray-300;
+    background-color: $color-primary-100;
+    color: $color-primary-300;
     box-shadow: none;
   }
 }

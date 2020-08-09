@@ -1,12 +1,9 @@
-@import "../../../styles/variables";
-
 .valuePropositions {
   display: grid;
   // Grid Template Columns is specified in js
   gap: 5%;
   max-width: 1200px;
   margin: 0 auto;
-  color: $color-gray-000;
   @media screen and (max-width: 768px) {
     display: block;
     text-align: center;

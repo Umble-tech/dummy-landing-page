@@ -1,11 +1,13 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
-import { Heading2 } from "../components/Typography/Typography";
+import { Heading2, Body1 } from "../components/Typography/Typography";
+import Button from "../components/Button/Button";
+import SubmittedMessage from "../components/SubmittedMessage/SubmittedMessage";
 
 const Submitted = () => {
   return (
     <Layout>
-      <Heading2>Thank you!</Heading2>
+      <SubmittedMessage />
     </Layout>
   );
 };

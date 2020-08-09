@@ -1,11 +1,7 @@
-@import "../../../styles/variables";
-
 .landingPageBodyContainer {
-  .block section > * {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: $page-padding;
-  }
+  max-width: 1200px;
+  margin: 0 auto;
+
   .block + .block {
     margin-top: 15rem;
   }

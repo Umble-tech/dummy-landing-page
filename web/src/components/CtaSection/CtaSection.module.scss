@@ -1,21 +1,7 @@
-@import "../../../styles/variables";
-
 .ctaSection {
   text-align: center;
-  background-color: $color-primary-600;
-  padding: 5rem 0;
-  position: relative;
   a {
     margin-top: 3rem;
+    display: inline-block;
   }
-}
-svg.arrowBackground {
-  max-width: none !important;
-  padding: 0 !important;
-  width: 100%;
-  margin: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateY(calc(-100% + 2px));
 }
