@@ -1,19 +1,15 @@
-# Hvordan bruke en landingsside for å validere produktet ditt – Del 2
+# Hvordan bruke en landingsside for å validere produktet ditt – Del 3 (Git-repoet)
 
-## Sette opp siden
+## Sette opp domenet
 
-Om du jobber i en større bedrift med et eksisterende brand, må du stille deg spørsmålet om denne siden skal ligge under deres eksisterende brand, eller om det skal opprettes en side med eget navn og brand.
+Om du jobber i en større bedrift med et eksisterende brand, må du stille deg spørsmålet om denne siden skal ligge under deres eksisterende brand, eller om det skal opprettes en ny side med eget navn og brand.
 
 Domenet kjøper du hos f.eks. domeneshop, Netlify, GoDaddy, [One.com](http://one.com) osv.
 
 ### Github
 
-Open source-kode er basert på idéen at gjennom deling av kode, kan vi skape bedre mer pålitelig kode. Derfor er dette tenkt som et utganspunkt for din nye nettside.
-
-1. Gå til repositiorien [https://github.com/Umble-tech/dummy-landing-page](https://github.com/Umble-tech/dummy-landing-page)
-2. Øverst til høyre, trykk på **Fork**
-
-Nå har du fått repositorien på din bruker. Laste den ned ved å skrive dette i terminalen (husk å legg inn ditt brukernavn):
+Velkommen, nå som du er her på Github er det bare å se øverst til høyre, og trykke på **Fork**.
+Last den ned ved å skrive dette i terminalen (husk å legg inn ditt brukernavn):
 
 ```
 git clone https://github.com/BRUKERNANV/dummy-landing-page
@@ -35,12 +31,6 @@ Etter du har forket og klonet prosjektet, må du navigere deg inn i mappen med:�
 ### Plausible
 
 Opprett en konto [https://plausible.io/](https://plausible.io/)
-
-```
-Til dere i Umble (legger inn annen instruksjon til andre):
-**Brukernavn:** tobias@umble.no
-**Passord:** olLsGheV4o93WWh*Xy&9
-```
 
 1. Opprett en ny nettside her.
 
