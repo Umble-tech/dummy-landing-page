@@ -7,7 +7,10 @@ import { Subtitle } from "../Typography/Typography";
 const Footer = ({ name, logoSrc, social }) => {
   return (
     <footer className={styles.footer}>
-      <SocialRow socialPlatforms={social} />
+      <div>
+        <img src={logoSrc} alt={`${name} logo`} />
+        <SocialRow socialPlatforms={social} />
+      </div>
       <Subtitle>Made by Umble</Subtitle>
     </footer>
   );
