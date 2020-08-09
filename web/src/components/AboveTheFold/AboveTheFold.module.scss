@@ -1,8 +1,53 @@
+@import "../../../styles/variables";
+
 .aboveTheFold {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 7fr 3fr;
   align-items: center;
   min-height: 100vh;
+  margin-bottom: 15rem;
+  @media screen and(max-width: 700px) {
+    grid-template-columns: 9fr 1fr;
+    .right {
+      visibility: hidden;
+    }
+  }
+
+  > div {
+    height: 100%;
+    position: relative;
+    img {
+      position: absolute;
+      bottom: 10%;
+      width: 100%;
+      z-index: 0;
+    }
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+    background-color: $color-primary-500;
+    padding: 0 10%;
+    div {
+      z-index: 1;
+      max-width: 35em;
+    }
+    img {
+      left: 0;
+    }
+    svg {
+      left: 0;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      transform: translateY(calc(100% - 1px));
+    }
+  }
+  .right {
+    right: 0;
+    background-color: $color-gray-900;
+  }
 
   h2 {
     max-width: 12em;

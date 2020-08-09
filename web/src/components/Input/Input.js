@@ -11,6 +11,7 @@ const Input = ({ id, type, value, onChange, label, required }) => {
     type: type === "textarea" ? null : type,
     required,
     className: styles.input,
+    placeholder: label,
   };
   return (
     <>
