@@ -2,12 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Footer.module.scss";
 import SocialRow from "../SocialRow/SocialRow";
+import { Subtitle } from "../Typography/Typography";
 
 const Footer = ({ name, logoSrc, social }) => {
   return (
     <footer className={styles.footer}>
-      <img src={logoSrc} alt={`${name} logo`} />
-      <SocialRow socialPlatforms={social} />
+      <div>
+        <img src={logoSrc} alt={`${name} logo`} />
+        <SocialRow socialPlatforms={social} />
+      </div>
+      <Subtitle>Made by Umble</Subtitle>
     </footer>
   );
 };
